@@ -1,0 +1,44 @@
+* , *:after , *:before {
+    box-sizing: border-box;
+}
+
+img {
+	max-width:100%;
+	height: auto;
+	vertical-align:middle;
+}
+
+ul {
+    list-style: none;
+}
+
+@mixin pad{
+    @media(max-width:992px){
+    @content;
+    }
+}
+@mixin mobile{
+    @media(max-width:769px){
+    @content;
+    }
+}
+
+.font-noto-serif {
+    font-family: 'Noto Serif TC' !important;
+}
+
+.font-noto-sans {
+    font-family: 'Noto Sans TC' !important;
+}
+
+.hover-text-darkYellow {
+    &:hover {
+        color :#9C9E18 !important
+    }
+}
+
+.hover-text-yellow {
+    &:hover {
+        color :#fbff22 !important
+    }
+}

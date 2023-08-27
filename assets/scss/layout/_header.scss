@@ -1,0 +1,58 @@
+.logo {
+  height: 53px;
+  width: 53px;
+
+  @include pad {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.ham {
+  width: 54px;
+  height: 40px;
+  border-radius: 5px;
+  background: #f3f1e5;
+  display: block;
+  position: relative;
+  border : 1px solid #030303;
+}
+
+.ham-origin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ham-bar {
+  height: 2px;
+  width: 26px;
+  position: absolute;
+  background: $dark;
+  margin: -1px 0 0 -13px;
+  transition: all .5s;
+}
+
+.ham-bar--top {
+  transform: translateY(-6px);
+}
+
+.ham-bar--bottom {
+  transform: translateY(6px);
+}
+
+#nav-toggle {
+  display: none;
+}
+
+#nav-toggle:checked ~ .ham .ham-bar--middle {
+  opacity: 0;
+}
+
+#nav-toggle:checked ~ .ham .ham-bar--top {
+  transform: rotate(-45deg);
+}
+
+#nav-toggle:checked ~ .ham .ham-bar--bottom {
+  transform: rotate(45deg);
+}
